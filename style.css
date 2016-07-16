@@ -8,10 +8,10 @@
 #feedbacklink {
 	width:80px;
 	height:46px;
-	float:left; 
 	margin-right:4px;
-	z-index:100;
 	padding-top:2px;
+	float:left; 
+	z-index:100;
 	border-radius:16px;
 	background-color:#2196F3;
 	opacity:0.75;
@@ -22,9 +22,13 @@
 }
 
 #modal {
+	width:610px; 
+	height:430px;
+	display:inline-block;
 	float:right;
 	padding:2px;
-	display:inline-block;
 	border: solid 3px #2196F3;
 	border-radius: 10px;
 }
+
+#modal iframe{border:none;}

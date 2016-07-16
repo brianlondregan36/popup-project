@@ -19,13 +19,11 @@
 	</div><br>
 
 	<div id="feedbackcontainer">
-	<div id="feedbacklink">
-		<span>Website Feedback</span>
-	</div>
+		<div id="feedbacklink">
+			<span>Website Feedback</span>
+		</div>
 
-	<div id="modal">
-	<iframe src="http://survey.confirmit.com/wix/p3079820754.aspx" width="600" height="420" scrolling="no" frameborder="0"></iframe>
-	</div>
+		<div id="modal"></div>
 	</div>
 	
 	
@@ -35,11 +33,24 @@
 	
 	<script type="text/javascript">
 	(function(){
-		x = 1;
+		var x = 1;
+		var modal = document.getElementById("modal");
 		document.getElementById("feedbackcontainer").onclick = toggleModal;
 		
 		function toggleModal()
 		{
+			
+			var created = modal.hasChildNodes();
+			if( !created ) {
+				var iframe = document.createElement('iframe');
+				iframe.src = 'http://survey.confirmit.com/wix/p3079820754.aspx';
+				iframe.width= '600';
+				iframe.height= '420';
+				iframe.scrolling = 'no';
+
+				modal.appendChild(iframe);
+			}
+			
 			if(x == 1) {
 				this.style.transform = "translate(-616px, -384px)";
 				x = 0;
