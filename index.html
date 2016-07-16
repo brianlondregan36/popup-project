@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pop-up Survey Demo</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body style="height:5000px;">
+
+	<div class="container-fluid" style="background-color:#2196F3;color:#fff;height:200px;">
+		<h1 class="pull-left">Pop-up Survey Demo</h1>
+		<h3 style="clear:both;">Imagine this is your Website</h3>
+		<p>Here's an example that demonstrates a slick way to work your Confirmit Survey into your website.</p>
+	</div><br>
+
+	<div id="feedbackcontainer">
+	<div id="feedbacklink">
+		<span>Website Feedback</span>
+	</div>
+
+	<div id="modal">
+	<iframe src="http://survey.confirmit.com/wix/p3079820754.aspx" width="600" height="420" scrolling="no" frameborder="0"></iframe>
+	</div>
+	</div>
+	
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	(function(){
+		x = 1;
+		document.getElementById("feedbackcontainer").onclick = toggleModal;
+		
+		function toggleModal()
+		{
+			if(x == 1) {
+				this.style.transform = "translate(-616px, -384px)";
+				x = 0;
+			}
+			else if(x == 0) {
+				this.style.transform = "translate(0px, 0px)";
+				x = 1;
+			}
+		}
+	})();	
+	</script>
+</body>
+</html>
