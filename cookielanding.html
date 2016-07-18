@@ -20,6 +20,8 @@
 		var completed = getParameterByName('completed');
 		var returnLink = getParameterByName('returnLink');
 		
+		alert("here is the link " + returnLink);
+		
 		if(completed) {
 			setCookieForSession('completed', 'yes');
 		}

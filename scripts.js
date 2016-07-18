@@ -18,7 +18,6 @@ function setCookieForSession(cname, cvalue) {
 	newCookie += "path=/; ";
 	newCookie += "domain=.popup-project.herokuapp.com; ";
     document.cookie = newCookie;
-	alert(newCookie);
 }
 
 
