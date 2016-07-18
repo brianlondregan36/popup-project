@@ -37,10 +37,10 @@
 	<script>
 	(function(){
 		var fbc = document.getElementById("feedbackcontainer");
-		fbc.style.visibility = 'hidden'; 
+		fbc.style.visibility = 'hidden';   //maybe add this into if check = yes
 		
 		var check = getCookie("completed");
-		if(check == ""){
+		if(check == ""){  //check maybe if cookie expired too? 
 			
 			var x = 1;
 			fbc.style.visibility = 'visible';

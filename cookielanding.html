@@ -2,15 +2,32 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Redirecting...</title>
 	<script src="scripts.js"></script>
 </head>
 
 <body>
-<p>Test</p>
 
-<script>
-setCookieForSession('completed', 'yes');
-</script>
+	<p>Redirecting...</p>
 
+	
+	
+	
+	
+	<script>
+	
+		var completed = getParameterByName('completed');
+		var returnLink = getParameterByName('returnLink');
+		
+		if(completed) {
+			setCookieForSession('completed', 'yes');
+		}
+		if(returnLink){
+			setCookieForSession('returnlink', returnLink);
+			window.location.href = returnLink; 
+		}
+
+	</script>
 </body>
 </html>
