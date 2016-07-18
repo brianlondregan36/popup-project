@@ -15,23 +15,22 @@
 	
 	
 	
-	<script>
 	
+
+	
+	<script>
+	(function(){
 		var completed = getParameterByName('completed');
 		var returnLink = getParameterByName('returnLink');
 		
-		alert("here is the link " + returnLink);
-		
-		if(completed) {
+		if(completed){
 			setCookieForSession('completed', 'yes');
 		}
 		if(returnLink){
 			setCookieForSession('returnlink', returnLink);
-			alert(window.location.href);
 			window.location.href = returnLink; 
-			alert(window.location.href);
 		}
-
+	})();
 	</script>
 </body>
 </html>

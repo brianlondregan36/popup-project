@@ -1,3 +1,4 @@
+
 function getCookie(cname) {
 		var name = cname + "=";
 		var cookies = document.cookie.split(';');
@@ -19,7 +20,6 @@ function setCookieForSession(cname, cvalue) {
 	newCookie += "domain=.popup-project.herokuapp.com; ";
     document.cookie = newCookie;
 }
-
 
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;

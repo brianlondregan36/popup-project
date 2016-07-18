@@ -37,10 +37,12 @@
 	<script>
 	(function(){
 		var fbc = document.getElementById("feedbackcontainer");
-		fbc.style.visibility = 'hidden';   //maybe add this into if check = yes
-		
 		var check = getCookie("completed");
-		if(check == ""){  //check maybe if cookie expired too? 
+		
+		if(check == "yes") {
+			fbc.style.visibility = 'hidden'; 
+		}
+		else if(check == "") {  
 			
 			var x = 1;
 			fbc.style.visibility = 'visible';
@@ -48,19 +50,20 @@
 		
 			function toggleModal()
 			{
-			
 				var modal = document.getElementById("modal");
 				var alreadyCreated = modal.hasChildNodes();
+				
 				if( !alreadyCreated ) {
 					var iframe = document.createElement('iframe');
 					
 					var returnLink = getCookie('returnlink');
-					if(returnLink == ""){
-					iframe.src = 'https://survey.confirmit.com/wix/p3079820754.aspx';
+					if(returnLink == "") {
+						iframe.src = 'https://survey.confirmit.com/wix/p3079820754.aspx';
 					}
 					else{
 						iframe.src = returnLink;
 					}
+					
 					iframe.width= '600';
 					iframe.height= '420';
 					iframe.scrolling = 'no';
