@@ -53,7 +53,14 @@
 				var alreadyCreated = modal.hasChildNodes();
 				if( !alreadyCreated ) {
 					var iframe = document.createElement('iframe');
+					
+					var returnLink = getCookie('returnlink');
+					if(returnLink == ""){
 					iframe.src = 'https://survey.confirmit.com/wix/p3079820754.aspx';
+					}
+					else{
+						iframe.src = returnLink;
+					}
 					iframe.width= '600';
 					iframe.height= '420';
 					iframe.scrolling = 'no';
