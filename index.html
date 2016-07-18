@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="scripts.js"></script>
 </head>
 
 <body style="height:5000px;">
@@ -31,33 +32,43 @@
 	
 	
 	
-	<script type="text/javascript">
+	
+	
+	<script>
 	(function(){
-		var x = 1;
-		var modal = document.getElementById("modal");
-		document.getElementById("feedbackcontainer").onclick = toggleModal;
+		var fbc = document.getElementById("feedbackcontainer");
+		fbc.style.visibility = 'hidden'; 
 		
-		function toggleModal()
-		{
+		var check = getCookie("completed");
+		if(check == ""){
 			
-			var created = modal.hasChildNodes();
-			if( !created ) {
-				var iframe = document.createElement('iframe');
-				iframe.src = 'https://survey.confirmit.com/wix/p3079820754.aspx';
-				iframe.width= '600';
-				iframe.height= '420';
-				iframe.scrolling = 'no';
+			var x = 1;
+			fbc.onclick = toggleModal;
+		
+			function toggleModal()
+			{
+			
+				var modal = document.getElementById("modal");
+				var alreadyCreated = modal.hasChildNodes();
+				if( !alreadyCreated ) {
+					var iframe = document.createElement('iframe');
+					iframe.src = 'https://survey.confirmit.com/wix/p3079820754.aspx';
+					iframe.width= '600';
+					iframe.height= '420';
+					iframe.scrolling = 'no';
 
-				modal.appendChild(iframe);
-			}
+					modal.appendChild(iframe);
+				}
 			
-			if(x == 1) {
-				this.style.transform = "translate(-616px, -384px)";
-				x = 0;
-			}
-			else if(x == 0) {
-				this.style.transform = "translate(0px, 0px)";
-				x = 1;
+				if(x == 1) {
+					this.style.transform = "translate(-616px, -384px)";
+					x = 0;
+				}
+				else if(x == 0) {
+					this.style.transform = "translate(0px, 0px)";
+					x = 1;
+				}
+				
 			}
 		}
 	})();	
