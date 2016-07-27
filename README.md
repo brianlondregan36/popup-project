@@ -1,12 +1,7 @@
-An example that demonstrates a slick way to work a Confirmit Survey into your website (DEMO FOR CLIENTS)
+A couple of examples to work Confirmit Surveys and Questions into your website (DEMO FOR CLIENTS).
 
+  all vanilla JS, some bootstrap 
 
-- deployed on my heroku site https://popup-project.herokuapp.com/index.html
+(Home) - an example of a web intercept with cookies to manage to can see the popup
 
-all vanilla JS, some bootstrap. 
-
-(Home) - responsive html and css design built from scratch, javascript 'jump to top' and 'shadow box' functionality
-
-(Interactive Lineups) - fun with jquery drag and drop ui, ajax to load 'player card' data from json file, javascript randomize card functionality, bootstrap design
-
-(Runs-Scored Gauntlet) - python and beautifulsoup web scraping code, teamscores module with my 'Team' class, javascript 'loading bar' functionality, lots of jquery and css for the result page's UI
+(Word Cloud) - analyze some corpus of text for the most common words - and eventually phrases - that were found 
