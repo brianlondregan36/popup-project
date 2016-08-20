@@ -1,3 +1,17 @@
+header { 
+	height: 185px; 
+}
+
+section{
+	margin:30px;
+	font-family:Verdana,sans-serif; 	
+}
+section div {
+	font-size:12px;
+}
+
+
+
 #feedbackcontainer {
 	position:fixed;
 	right:-610px;
@@ -30,5 +44,14 @@
 	border: solid 3px #2196F3;
 	border-radius: 10px;
 }
-
 #modal iframe{border:none;}
+
+
+
+@media only screen and (max-width: 390px)
+{
+	header {
+		height: 270px;
+    }
+	
+}
