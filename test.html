@@ -6,8 +6,8 @@
 	<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
-	<div id="title" style="width:100%"><p>CORS Testing -- JSON Example</p></div>
-	<div id="result"></div>
+	<div id="description" style="width:100%"><p>CORS Testing -- JSON Example</p></div>
+	<div id="outcome"></div>
 	
 	
 
@@ -24,15 +24,13 @@
 			type : "POST",
 			url : destination, 
 			dataType : "text", 
-			contentType: "application/json",
+			contentType: "application/x-www-form-urlencoded; charset=UTF-8",
 			data : respData, 
-			success : function(){
-				alert("hi");
-				$('#result').val("Success");
+			success : function(result){
+				$('#outcome').html(result);
 			},
 			error : function(error){
-				alert("boo");
-				$('#result').val(error);
+				$('#outcome').html(error);
 			}
 		});
 		
