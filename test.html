@@ -16,6 +16,7 @@
 		var destination = "https://survey.us.confirmit.com/wix/p3076178147.aspx"; 
 		var respData = { "qName" : "Brian Londregan", "qEmail" : "brian.londregan@gmail.com", "__sid__" : "" };
 	
+	//ANOTHER APPROACH:
 	//var invocation = new XMLHttpRequest(); 
 	//invocation.open("POST", url, true);
 	//invocation.setRequestHeader(name,value);
@@ -34,7 +35,6 @@
 				$('#outcome').html(error);
 			}
 		});
-		
 	
 	/*THIS IS ENABLED IN SURVEY SETTINGS:  Accept POST requests for unique respondent URLs (only enable if required)*/
 	/*YET I GET:  XMLHttpRequest cannot load https://survey.confirmit.com/wix/p3076178147.aspx. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'https://popup-project.herokuapp.com' is therefore not allowed access.*/
