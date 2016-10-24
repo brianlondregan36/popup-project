@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cross Browser Testing</title>
+	<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+	<div id="title" style="width:100%"><p>CORS Testing -- JSON Example</p></div>
+	<div id="result"></div>
+	
+	
+
+	<script>
+		var destination = "https://survey.confirmit.com/wix/p3076178147.aspx"; 
+		var respData = { "qName" : "Brian Londregan", "qEmail" : "brian.londregan@gmail.com" };
+	
+	//var invocation = new XMLHttpRequest(); 
+	//invocation.open("POST", url, true);
+	//invocation.setRequestHeader(name,value);
+	//invocation.send(data);
+
+		$.ajax({
+			type : "POST",
+			url : destination, 
+			dataType : "text", 
+			contentType: "application/json",
+			data : respData, 
+			success : function(){
+				$('#result').val("Success");
+			},
+			error : function(error){
+				$('#result').val(error);
+			}
+		});
+	</script>
+	
+</body>
+</html>
