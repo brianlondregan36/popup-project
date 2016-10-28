@@ -29,10 +29,10 @@
 			contentType: "application/x-www-form-urlencoded; charset=UTF-8",
 			data : respData, 
 			success : function(result){
-				$('#outcome').html(result);
+				$('#outcome').html("Post was successful.");
 			},
 			error : function(error){
-				$('#outcome').html(error);
+				$('#outcome').html("Error: " + error);
 			}
 		});
 	
