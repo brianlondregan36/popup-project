@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cross Origin POST</title>
+	<script type="text/javascript" src=" https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+	<div id="description" style="width:100%"><p>CORS Testing -- Ajax POST Example</p></div>
+	<br>
+	<div style="width:100%"><p>Sending this data to the survey -> qName: "Brian Londregan", qEmail: "brian.londregan@confirmit.com", qDepartment: "Professional Services", q1: "Y", q2: "Test", __sid__: ""</p></div>
+	<br>
+	<div id="outcome"></div>
+	
+	
+
+	<script>
+	
+		var destination = "https://deploy.nordic.confirmit.com/wix/p45322663.aspx"; 
+		var respData = { "qName" : "Brian Londregan", "qEmail" : "brian.londregan@confirmit.com", "qDepartment" : "Professional Services", "q1" : "Y", "q2" : "Test", "__sid__" : "" };
+	
+		$.ajax({
+			type : "POST",
+			url : destination, 
+			dataType : "text", 
+			contentType: "application/x-www-form-urlencoded; charset=UTF-8",
+			data : respData, 
+			success : function(result){
+				$('#outcome').html("Post was successful.");
+			},
+			error : function(error){
+				$('#outcome').html("Error: " + error);
+			}
+		});
+	
+	/* Make sure to enable "Accept POST requests for unique respondent URL" in Survey Settings */
+	/* To avoid access issues while working across origins, make sure to set up CORS on the target resource (the survey) 
+		i.e. make sure Access-Control-Allow-Origin is present in the response header 
+		So the following line of server-side code goes into the top of the survey */
+		  //Response.Headers.Add('Access-Control-Allow-Origin', 'https://popup-project.herokuapp.com');
+	
+	</script>
+	
+</body>
+</html>
