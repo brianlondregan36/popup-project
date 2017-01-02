@@ -23,7 +23,8 @@
 			dataType : "text", 
 			contentType: "application/x-www-form-urlencoded; charset=UTF-8",
 			data : respData, 
-			success : function(result){
+			success : function(result,status,xhr){
+				var output = xhr.status + ":" + status + "\n" + "Post was successful" + "\n" + xhr.getAllResponseHeaders();
 				$('#outcome').html("Post was successful.");
 			},
 			error : function(error){
