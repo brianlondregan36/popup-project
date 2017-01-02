@@ -25,16 +25,16 @@
 			contentType: "application/x-www-form-urlencoded; charset=UTF-8",
 			data : respData, 
 			success : function(result,status,xhr){
-				var output = "Post was successful." + '\n' + '\n';
-				output = output + '<span style="color:#27904A">' + xhr.status + ' ' + status + '</span>' + '\n' + '\n';  
+				var output = "Post was successful." + '<br>';
+				output = output + '<span style="color:#27904A">' + xhr.status + ' ' + status + '</span>' + '<br>';  
 				output = output + xhr.getAllResponseHeaders();
 				
 				$('#outcome').html(output);
 			},
 			error : function(xhr,status,error){
-				var output = "Post was not successful." + '\n' + '\n';
-				output = output + '<span style="color:#ED1203">' + xhr.status + ' ' + status + '</span>' + '\n' + '\n'; 
-				output = output + "Error: " + error + '\n' + '\n'; 
+				var output = "Post was not successful." + '<br>';
+				output = output + '<span style="color:#ED1203">' + xhr.status + ' ' + status + '</span>' + '<br>'; 
+				output = output + "Error: " + error + '<br>'; 
 				output = output + xhr.getAllResponseHeaders();
 				
 				$('#outcome').html(output);
