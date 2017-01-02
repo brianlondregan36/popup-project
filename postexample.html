@@ -25,7 +25,7 @@
 			data : respData, 
 			success : function(result,status,xhr){
 				var output = xhr.status + ":" + status + "\n" + "Post was successful" + "\n" + xhr.getAllResponseHeaders();
-				$('#outcome').html("Post was successful.");
+				$('#outcome').html(output);
 			},
 			error : function(error){
 				$('#outcome').html("Error: " + error);
