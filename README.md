@@ -2,6 +2,6 @@ An example to work a Confirmit Survey into your website as a web intercept (DEMO
 
   all vanilla JS, some bootstrap 
 
-(Home) - an example of a web intercept with cookies to manage to can see the popup
+(Home) - an example of a web intercept with cookies to manage who can see the popup
 
 (postexample) - an example of posting data to a Confirmit Survey via Ajax and utilizing CORS
