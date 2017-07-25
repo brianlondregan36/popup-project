@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Widget Library Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="londregan-widgets.js"></script>
+</head>
+
+<body>
+
+  <header class="container-fluid" style="background-color:#2196F3;color:#fff;">
+    <h1 class="pull-left">Widget Library Demo</h1>
+    <h3 style="clear:both;">Imagine this is your Report</h3>
+    <p>Here's an example that demonstrates how you can use the widget library to put a gauge or bar into your report.</p>
+  </header>
+
+  <br>
+  <div data-widget-id="aa" data-widget-type="progbar" data-widget-color="#000000"></div>
+  <br><br><br><br>
+
+  <div style="width:210px; height:210px; float:left"><div data-widget-id="bbb" data-widget-type="gauge" data-widget-color="#2196F3"></div></div>
+  <div><p>OPTION A: Controlled by the User e.g. press A and B keys.</p></div>
+
+  <div style="width:210px; height:210px; float:left"><div data-widget-id="ccc" data-widget-type="gauge" data-widget-color="#f37e21"></div></div>
+  <div><p style="display:inline;">OPTION B: Directly set the widget e.g. an API call, a hidden element on the page, etc.. </p></div>
+  <input type="hidden" id="targPer" name="targPer" value="71">
+
+
+
+  <script>
+    widgetlib.FindAndBuild();
+    var arr = widgetlib.widgets;
+
+    //Prog Bar Example
+    widgetlib.SetPercent(arr[0], 25);
+
+    //User Controlled Gauge Example
+    document.body.onkeyup = function(event) {
+      if(event.which == 65){
+        widgetlib.SetIncrease(arr[1]);
+      }
+      else if(event.which == 66 ){
+        widgetlib.SetDecrease(arr[1]);
+      }
+    };
+
+    //Direct Input Gauge Example
+    var p = document.getElementById('targPer').value;
+    widgetlib.SetPercent(arr[2], p); 
+
+  </script>
+</body>
+</html>
