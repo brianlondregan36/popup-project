@@ -10,7 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="londregan-widgets.js"></script>
   <style>
-    p{ margin-bottom:not set; }    
+    .gauge-inner p { margin: 24px 0 0px !important; }    
   </style>
 </head>
 
@@ -22,14 +22,12 @@
     <p>Here's an example that demonstrates how you can use the widget library to put a gauge or bar into your report.</p>
   </header>
 
-  <br>
-  <div data-widget-id="aa" data-widget-type="progbar" data-widget-color="#000000"></div>
-  <br><br><br><br>
+  <br><br><br>
 
-  <div style="width:210px; height:210px; float:left"><div data-widget-id="bbb" data-widget-type="gauge" data-widget-color="#2196F3"></div></div>
+  <div style="margin-left: 32px; width:210px; height:210px; float:left"><div data-widget-id="bbb" data-widget-type="gauge" data-widget-color="#F37E21"></div></div>
   <div><p>OPTION A: Controlled by the User e.g. press A and B keys.</p></div>
 
-  <div style="width:210px; height:210px; float:left"><div data-widget-id="ccc" data-widget-type="gauge" data-widget-color="#f37e21"></div></div>
+  <div style="width:210px; height:210px; float:left"><div data-widget-id="ccc" data-widget-type="gauge" data-widget-color="#2196F3"></div></div>
   <div><p style="display:inline;">OPTION B: Directly set the widget e.g. an API call, a hidden element on the page, etc.. </p></div>
   <input type="hidden" id="targPer" name="targPer" value="71">
 
