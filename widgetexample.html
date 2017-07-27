@@ -38,21 +38,21 @@
     var arr = widgetlib.widgets;
 
     //Prog Bar Example
-    widgetlib.SetPercent(arr[0], 25);
+    //widgetlib.SetPercent(arr[0], 25);
 
     //User Controlled Gauge Example
     document.body.onkeyup = function(event) {
       if(event.which == 65){
-        widgetlib.SetIncrease(arr[1]);
+        widgetlib.SetIncrease(arr[0]);
       }
       else if(event.which == 66 ){
-        widgetlib.SetDecrease(arr[1]);
+        widgetlib.SetDecrease(arr[0]);
       }
     };
 
     //Direct Input Gauge Example
     var p = document.getElementById('targPer').value;
-    widgetlib.SetPercent(arr[2], p); 
+    widgetlib.SetPercent(arr[1], p); 
 
   </script>
 </body>
