@@ -2,8 +2,39 @@ An example to work a Confirmit Survey into your website as a web intercept (DEMO
 
   all vanilla JS, some bootstrap 
 
-(Home) - an example of a web intercept with cookies to manage who can see the popup
+(Home) - an example of a web intercept survey with cookies to manage who will see the popup
 
 (postexample) - an example of posting data to a Confirmit Survey via Ajax and utilizing CORS
 
-(widgetexample) - an example of using the widget library to put a gauge or bar into your report. 
+(widgetexample) - an example of using the 'widget library' module to add a styled gauge or progress bar onto your page
+
+
+
+widget-library USAGE
+
+1. Point to the external JS file which contains the widget module.
+
+  <script src="londregan-widgets.js"></script>
+
+2. Insert a div onto the page and include two (or three) attributes.
+  
+  data-widget-id="some unique id" and data-widget-type="gauge||progbar"
+  data-widget-color="#2196F3" is optional
+
+3. In your JS call the method to search for the added divs on the page and build them into the widgets.
+
+  widgetlib.FindAndBuild();
+
+4. Afterwards, the module will contain an array of widgets on the page that you can use.
+
+  var arr = widgetlib.widgets;
+
+5. In your JS you can call methods to move the gauge or progress bar up or down.
+
+  widgetlib.SetIncrease(widget);
+  widgetlib.SetDecrease(widget);
+
+6. Or call this method if you just want to set the widget directly.
+
+  widgetlib.SetPercent(widget, percent);
+ 
