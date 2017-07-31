@@ -36,7 +36,7 @@ var widgetlib = (function WidgetModule() {
           var ss = document.createElement("link");
           ss.rel = "stylesheet";
           ss.type = "text/css";
-          ss.href = "londregan-widgets.css";
+          ss.href = "https://popup-project.herokuapp.com/londregan-widgets.css";
           document.getElementsByTagName("head")[0].appendChild(ss);
         }
       }
