@@ -8,7 +8,7 @@ Some examples of Confirmit integration work (DEMO FOR CLIENTS).
 
 (widgetexample) - example of using the 'widget library' module to add a styled gauge or progress bar onto your report page
 
-
+(cloudexample) - using vanilla javascript and CSS to change the size of the words, this will analyze a large corpus of text and output the most commonly used words found in that text
 
 
 .WIDGET-LIBRARY USAGE.
