@@ -1,0 +1,61 @@
+#inputs{
+	width:100%;
+	margin-top:40px; 
+	padding-left:20px;
+	padding-right:20px;
+}
+
+textarea#corpus
+{
+	width:80%;
+	height:200px;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	border: 2px solid #2196F3;
+	resize:vertical;
+}
+
+#inputs div
+{
+	width:100%;	
+	margin-top:10px;
+	text-align:center;
+}
+#inputs span
+{
+	color:#2196F3;
+	font-weight:bold;"	
+}
+
+#depth 
+{
+    border: 2px solid #2196F3;
+	padding-left:6px;
+}
+.error-input {
+	animation: blink .25s step-end 4 alternate;
+	-webkit-animation: blink .25s step-end 4 alternate;
+}
+@keyframes blink { 
+   50% { border-color: red; } 
+}
+
+
+
+
+#output
+{
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:50px;
+	padding:8px;
+	border: 1px dashed #2196F3;
+	border-radius:24px;
+	overflow-x:auto;
+}
+#output span
+{
+	padding:3px; 
+}
